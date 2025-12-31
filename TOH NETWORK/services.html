@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Internet, CCTV & Network Solutions - Toh Networks</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Page-specific CSS -->
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(42, 92, 170, 0.9), rgba(26, 35, 126, 0.9)), 
+                        url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            margin-top: 130px;
+        }
+        
+        .service-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .service-detail-content:nth-child(even) .service-detail-text {
+            order: 2;
+        }
+        
+        .service-detail-text h3 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+        
+        .service-feature-list {
+            margin: 30px 0;
+        }
+        
+        .service-feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .service-feature-list i {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+        
+        .service-visual {
+            position: relative;
+            padding: 40px;
+            background: var(--light-blue);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .service-visual i {
+            font-size: 8rem;
+            color: var(--primary-blue);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .process-steps {
+            background: var(--light-blue);
+            padding: 80px 0;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .step-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .service-comparison {
+            padding: 80px 0;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .comparison-row.header {
+            background: var(--primary-blue);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .comparison-row:nth-child(even) {
+            background: var(--light-blue);
+        }
+        
+        .check-mark {
+            color: var(--accent-gold);
+        }
+        
+        .x-mark {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+        </div>
+        <p>Loading Toh Networks...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</span>
+                    <span><i class="fab fa-whatsapp"></i> 0706 315 742</span>
+                </div>
+                <div class="social-top">
+                    <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Toh Networks</h1>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html" class="active"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn btn-primary pulse">Get Free Quote <i class="fas fa-arrow-right"></i></a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Our Comprehensive Services</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">From high-speed internet to advanced security systems, we provide complete digital solutions for Kibwezi</p>
+            <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#internet" class="btn btn-primary btn-large">
+                    <i class="fas fa-wifi"></i> Internet Services
+                </a>
+                <a href="#security" class="btn btn-secondary btn-large">
+                    <i class="fas fa-shield-alt"></i> Security Systems
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internet Services -->
+    <section id="internet" class="service-detail">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Primary Service</span>
+                <h2 class="section-title">Internet & Connectivity Solutions</h2>
+                <p class="section-description">Reliable, high-speed internet for homes and businesses</p>
+            </div>
+
+            <div class="service-detail-content" data-aos="fade-up">
+                <div class="service-detail-text">
+                    <h3>High-Speed Broadband Internet</h3>
+                    <p>We provide cutting-edge internet solutions using the latest technology to ensure fast, reliable connectivity for your home or business in Kibwezi.</p>
+                    
+                    <div class="service-feature-list">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Hotspot Services:</strong> Public WiFi solutions for businesses</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>PPoE Connections:</strong> Secure direct internet connections</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Fiber Optic Backbone:</strong> Future-proof infrastructure</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>99.9% Uptime:</strong> Guaranteed reliability</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Unlimited Data:</strong> No throttling or data caps</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>24/7 Monitoring:</strong> Proactive issue detection</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="packages.html" class="btn btn-primary">
+                        <i class="fas fa-wifi"></i> View Internet Packages
+                    </a>
+                </div>
+                
+                <div class="service-visual" data-aos="zoom-in">
+                    <i class="fas fa-wifi"></i>
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Internet Connectivity" 
+                         style="width: 100%; border-radius: var(--border-radius);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Systems -->
+    <section id="security" class="service-detail bg-light">
+        <div class="container">
+            <div class="service-detail-content" data-aos="fade-up">
+                <div class="service-visual" data-aos="zoom-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Security Systems" 
+                         style="width: 100%; border-radius: var(--border-radius);">
+                </div>
+                
+                <div class="service-detail-text">
+                    <h3>CCTV & Security Systems</h3>
+                    <p>Protect your property with our advanced surveillance solutions. We install and maintain CCTV systems for complete peace of mind.</p>
+                    
+                    <div class="service-feature-list">
+                        <h4>Security Solutions:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>HD CCTV Cameras:</strong> Crystal clear 4K video quality</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Night Vision:</strong> 24/7 surveillance capability</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Remote Monitoring:</strong> View from anywhere via smartphone</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Motion Detection:</strong> Smart alerts for unusual activity</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Cloud Storage:</strong> Secure video recording</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Professional Installation:</strong> Expert setup and configuration</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-shield-alt"></i> Get Security Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Solutions -->
+    <section id="network" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content" data-aos="fade-up">
+                <div class="service-detail-text">
+                    <h3>Network Infrastructure</h3>
+                    <p>Complete network solutions including design, installation, and maintenance for businesses and institutions in Kibwezi.</p>
+                    
+                    <div class="service-feature-list">
+                        <h4>Network Services:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Network Design:</strong> Custom architecture for your needs</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Wireless Solutions:</strong> Enterprise-grade WiFi networks</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Cable Installation:</strong> Structured cabling systems</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Network Security:</strong> Firewalls and protection</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>VoIP Systems:</strong> Business phone solutions</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Regular Maintenance:</strong> Preventive care and updates</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-network-wired"></i> Request Network Audit
+                    </a>
+                </div>
+                
+                <div class="service-visual" data-aos="zoom-in">
+                    <i class="fas fa-network-wired"></i>
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Network Infrastructure" 
+                         style="width: 100%; border-radius: var(--border-radius);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support -->
+    <section id="support" class="service-detail bg-light">
+        <div class="container">
+            <div class="service-detail-content" data-aos="fade-up">
+                <div class="service-visual" data-aos="zoom-in">
+                    <i class="fas fa-headset"></i>
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Technical Support" 
+                         style="width: 100%; border-radius: var(--border-radius);">
+                </div>
+                
+                <div class="service-detail-text">
+                    <h3>Technical Support & Maintenance</h3>
+                    <p>Round-the-clock technical assistance and preventive maintenance to keep your systems running smoothly.</p>
+                    
+                    <div class="service-feature-list">
+                        <h4>Support Services:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>24/7 Help Desk:</strong> Always available for assistance</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>On-site Support:</strong> Expert technicians when needed</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Remote Assistance:</strong> Quick fixes without visits</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Preventive Maintenance:</strong> Regular system checks</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Emergency Response:</strong> Rapid issue resolution</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Training:</strong> Staff training on systems</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="tel:0706315742" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Support: 0706 315 742
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="process-steps">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">How We Work</span>
+                <h2 class="section-title">Our Service Process</h2>
+                <p class="section-description">Simple, transparent process from consultation to completion</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Free assessment of your needs and requirements</p>
+                </div>
+
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Planning</h3>
+                    <p>Custom solution design and proposal</p>
+                </div>
+
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Installation</h3>
+                    <p>Professional setup with minimal disruption</p>
+                </div>
+
+                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support</h3>
+                    <p>Ongoing maintenance and 24/7 assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Comparison -->
+    <section class="service-comparison">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Compare Services</span>
+                <h2 class="section-title">Service Comparison</h2>
+                <p class="section-description">Find the perfect solution for your needs</p>
+            </div>
+
+            <div class="comparison-table" data-aos="fade-up">
+                <div class="comparison-row header">
+                    <div>Features</div>
+                    <div>Basic</div>
+                    <div>Business</div>
+                    <div>Enterprise</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>Internet Speed</div>
+                    <div>15-25 Mbps</div>
+                    <div>30-50 Mbps</div>
+                    <div>50-100 Mbps</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>CCTV Cameras</div>
+                    <div><i class="fas fa-check check-mark"></i> 2-4</div>
+                    <div><i class="fas fa-check check-mark"></i> 4-8</div>
+                    <div><i class="fas fa-check check-mark"></i> 8-16+</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>24/7 Support</div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>Remote Monitoring</div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                    <div><i class="fas fa-check check-mark"></i></div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>Cloud Storage</div>
+                    <div>7 Days</div>
+                    <div>30 Days</div>
+                    <div>90 Days</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div>Network Security</div>
+                    <div>Basic</div>
+                    <div><i class="fas fa-check check-mark"></i> Advanced</div>
+                    <div><i class="fas fa-check check-mark"></i> Enterprise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Transform Your Digital Infrastructure?</h2>
+                <p>Contact us today for a free consultation and customized solution</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Schedule Consultation
+                    </a>
+                    <a href="tel:0706315742" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Call Now: 0706 315 742
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Toh Networks</h3>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Providing reliable internet and security solutions in Kibwezi since October 2025.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#internet"><i class="fas fa-wifi"></i> Internet Services</a></li>
+                        <li><a href="#security"><i class="fas fa-shield-alt"></i> CCTV Installation</a></li>
+                        <li><a href="#network"><i class="fas fa-network-wired"></i> Network Solutions</a></li>
+                        <li><a href="#support"><i class="fas fa-headset"></i> Technical Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kibwezi Town, Makueni County</li>
+                        <li><i class="fas fa-phone"></i> 0706 315 742 (WhatsApp)</li>
+                        <li><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
+                        <li><i class="fas fa-clock"></i> Sat: 9AM-4PM</li>
+                        <li><i class="fas fa-headset"></i> 24/7 Emergency Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Toh Networks. All rights reserved. | Founded October 12, 2025 | Serving Kibwezi and Beyond</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254706315742" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat about Services</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

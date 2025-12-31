@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Packages | Affordable Plans for Homes & Businesses - Toh Networks</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Page-specific CSS -->
+    <style>
+        .packages-hero {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(42, 92, 170, 0.9)), 
+                        url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            margin-top: 130px;
+        }
+        
+        .packages-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .packages-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .package-category {
+            padding: 80px 0;
+        }
+        
+        .package-category:nth-child(even) {
+            background: var(--light-blue);
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .category-title {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+        
+        .packages-grid-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .package-card-detailed {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .package-card-detailed:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .package-card-detailed.featured {
+            border: 3px solid var(--accent-gold);
+            transform: scale(1.05);
+        }
+        
+        .package-header-detailed {
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .package-badge-detailed {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--accent-gold);
+            color: var(--dark);
+            padding: 8px 40px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transform: rotate(45deg);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+        
+        .package-speed-large {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin: 10px 0;
+        }
+        
+        .package-speed-label {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .package-price-large {
+            margin: 20px 0;
+        }
+        
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1;
+        }
+        
+        .price-currency {
+            font-size: 1.5rem;
+            color: var(--gray-600);
+            vertical-align: top;
+        }
+        
+        .price-period {
+            color: var(--gray-600);
+            font-size: 1rem;
+        }
+        
+        .package-features-detailed {
+            padding: 30px;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--gray-200);
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+        
+        .package-footer-detailed {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+        
+        .btn-package {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .comparison-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+        }
+        
+        .speed-comparison {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+        
+        .speed-bar {
+            margin: 20px 0;
+        }
+        
+        .speed-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .speed-meter {
+            height: 20px;
+            background: var(--gray-200);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .speed-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 10px;
+            transition: width 1.5s ease;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 30px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .testimonial-packages {
+            background: var(--primary-blue);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .testimonial-packages .section-title {
+            color: white;
+        }
+        
+        .package-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 5px 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+        </div>
+        <p>Loading Toh Networks...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</span>
+                    <span><i class="fab fa-whatsapp"></i> 0706 315 742</span>
+                </div>
+                <div class="social-top">
+                    <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Toh Networks</h1>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html" class="active"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn btn-primary pulse">Get Connected <i class="fas fa-arrow-right"></i></a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Packages Hero -->
+    <section class="packages-hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Internet Packages for Kibwezi</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Affordable, high-speed internet plans for homes, businesses, and institutions. No hidden fees, no contracts.</p>
+            <div class="package-tags animate__animated animate__fadeInUp animate__delay-2s">
+                <span class="package-tag">🏠 Home Plans</span>
+                <span class="package-tag">💼 Business Plans</span>
+                <span class="package-tag">🎮 Gaming Plans</span>
+                <span class="package-tag">🏢 Enterprise Plans</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Packages -->
+    <section id="home-packages" class="package-category">
+        <div class="container">
+            <div class="category-header" data-aos="fade-up">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h2 class="category-title">Home Internet Packages</h2>
+                <p class="section-description">Perfect for families, students, and home offices in Kibwezi</p>
+            </div>
+
+            <div class="packages-grid-detailed">
+                <!-- Home Basic -->
+                <div class="package-card-detailed" data-aos="fade-right" data-aos-delay="100">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                        <h3>Home Basic</h3>
+                        <div class="package-speed-large">15 Mbps</div>
+                        <div class="package-speed-label">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency">KES</span>
+                            <span class="price-amount">1,500</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>15 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>10 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>2-4 Devices</strong> Recommended
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Standard Support</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=home-basic" class="btn btn-outline btn-package">
+                            <i class="fas fa-shopping-cart"></i> Select Plan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Home Plus -->
+                <div class="package-card-detailed featured" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="package-badge-detailed">Most Popular</div>
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #2A5CAA, #4A90E2); color: white;">
+                        <h3 style="color: white;">Home Plus</h3>
+                        <div class="package-speed-large" style="color: white;">25 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">2,500</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>25 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>20 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited Premium</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>4-8 Devices</strong> Recommended
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>4K Streaming</strong> Supported
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Basic Security</strong> Included
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=home-plus" class="btn btn-primary btn-package">
+                            <i class="fas fa-bolt"></i> Get Started
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Family Premium -->
+                <div class="package-card-detailed" data-aos="fade-left" data-aos-delay="100">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #FFC107, #FFB300);">
+                        <h3>Family Premium</h3>
+                        <div class="package-speed-large">40 Mbps</div>
+                        <div class="package-speed-label">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency">KES</span>
+                            <span class="price-amount">4,500</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>40 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>30 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited Premium</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Gaming Optimized</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Multi-4K Streaming</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Priority Support</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=family-premium" class="btn btn-outline btn-package">
+                            <i class="fas fa-crown"></i> Select Premium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Packages -->
+    <section id="business-packages" class="package-category bg-light">
+        <div class="container">
+            <div class="category-header" data-aos="fade-up">
+                <div class="category-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2 class="category-title">Business Internet Packages</h2>
+                <p class="section-description">Reliable connectivity for shops, offices, and enterprises in Kibwezi</p>
+            </div>
+
+            <div class="packages-grid-detailed">
+                <!-- Business Starter -->
+                <div class="package-card-detailed" data-aos="fade-right" data-aos-delay="100">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #4CAF50, #2E7D32); color: white;">
+                        <h3 style="color: white;">Business Starter</h3>
+                        <div class="package-speed-large" style="color: white;">20 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">3,000</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #4CAF50; color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>20 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #4CAF50; color: white;">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>15 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #4CAF50; color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited Business</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #4CAF50; color: white;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>5-10 Users</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #4CAF50; color: white;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Business Security</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=business-starter" class="btn btn-outline btn-package">
+                            <i class="fas fa-store"></i> For Small Shops
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Pro -->
+                <div class="package-card-detailed featured" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="package-badge-detailed">Recommended</div>
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #2A5CAA, #1A237E); color: white;">
+                        <h3 style="color: white;">Business Pro</h3>
+                        <div class="package-speed-large" style="color: white;">50 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">6,500</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>50 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>40 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited Premium</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>10-20 Users</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Advanced Security</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Static IP</strong> Included
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: var(--primary-blue); color: white;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>24/7 Priority</strong> Support
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=business-pro" class="btn btn-primary btn-package">
+                            <i class="fas fa-building"></i> For Medium Offices
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Elite -->
+                <div class="package-card-detailed" data-aos="fade-left" data-aos-delay="100">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #6A1B9A, #4A148C); color: white;">
+                        <h3 style="color: white;">Enterprise Elite</h3>
+                        <div class="package-speed-large" style="color: white;">100 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Download Speed</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">12,500</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>100 Mbps</strong> Download Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>80 Mbps</strong> Upload Speed
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited Enterprise</strong> Data
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>20-50+ Users</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Multiple Static IPs</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Enterprise Security</strong> Suite
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Dedicated Bandwidth</strong>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #6A1B9A; color: white;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Dedicated Account</strong> Manager
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=enterprise-elite" class="btn btn-outline btn-package">
+                            <i class="fas fa-city"></i> For Large Enterprises
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Packages -->
+    <section id="special-packages" class="package-category">
+        <div class="container">
+            <div class="category-header" data-aos="fade-up">
+                <div class="category-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="category-title">Special Purpose Packages</h2>
+                <p class="section-description">Optimized solutions for specific needs in Kibwezi</p>
+            </div>
+
+            <div class="packages-grid-detailed">
+                <!-- Gaming Package -->
+                <div class="package-card-detailed" data-aos="fade-right">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #FF5722, #D84315); color: white;">
+                        <h3 style="color: white;">Gaming Extreme</h3>
+                        <div class="package-speed-large" style="color: white;">60 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Ultra-Low Latency</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">5,500</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #FF5722; color: white;">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Gaming Optimized</strong> Network
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #FF5722; color: white;">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>< 10ms</strong> Ping Time
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #FF5722; color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>60 Mbps</strong> Download
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #FF5722; color: white;">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>40 Mbps</strong> Upload
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #FF5722; color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited</strong> Gaming Data
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=gaming-extreme" class="btn btn-outline btn-package">
+                            <i class="fas fa-gamepad"></i> For Gamers
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Student Package -->
+                <div class="package-card-detailed" data-aos="fade-up">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #9C27B0, #7B1FA2); color: white;">
+                        <h3 style="color: white;">Student Special</h3>
+                        <div class="package-speed-large" style="color: white;">20 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Academic Discount</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">1,200</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #9C27B0; color: white;">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Student Discount</strong> 20% Off
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #9C27B0; color: white;">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>20 Mbps</strong> Download
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #9C27B0; color: white;">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Educational</strong> Resources Access
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #9C27B0; color: white;">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Video Lectures</strong> Optimized
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #9C27B0; color: white;">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Unlimited</strong> Research Data
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=student-special" class="btn btn-outline btn-package">
+                            <i class="fas fa-user-graduate"></i> For Students
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hotspot Package -->
+                <div class="package-card-detailed" data-aos="fade-left">
+                    <div class="package-header-detailed" style="background: linear-gradient(135deg, #00BCD4, #0097A7); color: white;">
+                        <h3 style="color: white;">Business Hotspot</h3>
+                        <div class="package-speed-large" style="color: white;">30 Mbps</div>
+                        <div class="package-speed-label" style="color: rgba(255,255,255,0.8);">Public WiFi Solution</div>
+                        <div class="package-price-large">
+                            <span class="price-currency" style="color: white;">KES</span>
+                            <span class="price-amount" style="color: white;">4,000</span>
+                            <span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features-detailed">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #00BCD4; color: white;">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Public Hotspot</strong> Solution
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #00BCD4; color: white;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>50+ Concurrent</strong> Users
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #00BCD4; color: white;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Secure Guest</strong> Network
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #00BCD4; color: white;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Usage Analytics</strong> Dashboard
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background: #00BCD4; color: white;">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Custom Splash</strong> Page
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-footer-detailed">
+                        <a href="contact.html?package=hotspot-business" class="btn btn-outline btn-package">
+                            <i class="fas fa-store-alt"></i> For Restaurants/Shops
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Comparison -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Speed Comparison</h2>
+                <p class="section-description">See how our packages compare for different activities</p>
+            </div>
+
+            <div class="speed-comparison" data-aos="fade-up">
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>Email & Web Browsing</span>
+                        <span>5 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 5%"></div>
+                    </div>
+                </div>
+                
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>HD Video Streaming</span>
+                        <span>15 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 15%"></div>
+                    </div>
+                </div>
+                
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>4K Video Streaming</span>
+                        <span>25 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 25%"></div>
+                    </div>
+                </div>
+                
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>Online Gaming</span>
+                        <span>40 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+                
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>Home Office (Video Calls)</span>
+                        <span>50 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 50%"></div>
+                    </div>
+                </div>
+                
+                <div class="speed-bar">
+                    <div class="speed-label">
+                        <span>Small Business</span>
+                        <span>100 Mbps</span>
+                    </div>
+                    <div class="speed-meter">
+                        <div class="speed-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Get answers to common questions about our internet packages</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span>What's included in the installation fee?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our installation includes all necessary equipment (router/modem), setup, configuration, and basic testing. For standard installations, there's no additional fee for the first month. Special installations may have additional charges which we discuss upfront.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span>Is there a contract or lock-in period?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! We believe in service quality. There are no long-term contracts. You can upgrade, downgrade, or cancel your service with 30 days' notice. We're confident you'll stay because of our excellent service, not because of a contract.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span>What happens if the internet goes down?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer 24/7 technical support. If your internet goes down, call us immediately at 0706 315 742. Our average response time is under 30 minutes, and we guarantee to resolve most issues within 4 hours. Business packages include priority support with guaranteed 2-hour response time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span>Can I upgrade or downgrade my package?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can change your package at any time. Upgrades take effect immediately, while downgrades take effect at the start of your next billing cycle. There are no fees for changing packages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span>Do you offer custom packages for specific needs?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! If our standard packages don't meet your needs, we can create a custom solution. This is particularly useful for schools, clinics, hotels, and large businesses in Kibwezi. Contact us for a custom quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Testimonials -->
+    <section class="testimonial-packages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What Our Package Users Say</h2>
+                <p class="section-description">Real feedback from Kibwezi residents and businesses</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-right">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Switched to Toh Networks Business Pro package and our office productivity improved by 40%. The speed is consistent even during peak hours."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>David Kimani</h4>
+                            <p>Office Manager, Kibwezi</p>
+                            <small>Business Pro Package</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"The Family Premium package is perfect for our home. Kids can stream, I can work from home, and we never experience lag or buffering."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Grace Wambui</h4>
+                            <p>Home User, Kibwezi West</p>
+                            <small>Family Premium Package</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-left">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"As a student, the Student Special package has been a game-changer. Affordable and reliable for online classes and research."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Brian Omondi</h4>
+                            <p>University Student</p>
+                            <small>Student Special Package</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Ready to Get the Perfect Internet Package?</h2>
+                <p>Contact us today and we'll help you choose the best plan for your needs in Kibwezi</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Get Free Consultation
+                    </a>
+                    <a href="tel:0706315742" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Call: 0706 315 742
+                    </a>
+                </div>
+                <p class="cta-note"><i class="fas fa-check-circle"></i> Free installation for all new connections</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Toh Networks</h3>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Providing reliable internet and security solutions in Kibwezi since October 2025.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Package Categories</h4>
+                    <ul>
+                        <li><a href="#home-packages"><i class="fas fa-home"></i> Home Packages</a></li>
+                        <li><a href="#business-packages"><i class="fas fa-briefcase"></i> Business Packages</a></li>
+                        <li><a href="#special-packages"><i class="fas fa-star"></i> Special Packages</a></li>
+                        <li><a href="services.html"><i class="fas fa-shield-alt"></i> Security Add-ons</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kibwezi Town, Makueni County</li>
+                        <li><i class="fas fa-phone"></i> 0706 315 742 (WhatsApp)</li>
+                        <li><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
+                        <li><i class="fas fa-clock"></i> Sat: 9AM-4PM</li>
+                        <li><i class="fas fa-headset"></i> 24/7 Support Available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Toh Networks. All rights reserved. | Founded October 12, 2025 | Serving Kibwezi and Beyond</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254706315742" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Ask About Packages</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const item = question.parentElement;
+                
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Animate speed bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const speedBars = document.querySelectorAll('.speed-fill');
+                    speedBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 300);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const comparisonSection = document.querySelector('.comparison-section');
+        if (comparisonSection) {
+            observer.observe(comparisonSection);
+        }
+
+        // Package selection highlight
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPackage = urlParams.get('package');
+        if (selectedPackage) {
+            setTimeout(() => {
+                const packageCard = document.querySelector(`[href*="${selectedPackage}"]`)?.closest('.package-card-detailed');
+                if (packageCard) {
+                    packageCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    packageCard.style.boxShadow = '0 0 0 5px var(--accent-gold)';
+                    setTimeout(() => {
+                        packageCard.style.boxShadow = '';
+                    }, 3000);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
