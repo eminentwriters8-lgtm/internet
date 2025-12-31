@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Toh Networks | Our Story, Mission & Team - Kibwezi's Trusted Network Provider</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Page-specific CSS -->
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.9), rgba(42, 92, 170, 0.9)), 
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            margin-top: 130px;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .foundation-story {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .foundation-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--light-blue), #bbdefb);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: -1;
+        }
+        
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .foundation-date {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--dark);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .story-highlight {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            margin: 40px 0;
+            padding-left: 40px;
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .ceo-section {
+            background: var(--light-blue);
+            padding: 100px 0;
+        }
+        
+        .ceo-profile {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .ceo-photo-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .ceo-photo-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .ceo-photo-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .ceo-badge {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .ceo-contact-info {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .mission-values {
+            padding: 100px 0;
+        }
+        
+        .mission-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mission-icon-large {
+            font-size: 4rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--light-blue), #bbdefb);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+        }
+        
+        .team-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .member-photo {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .member-info {
+            padding: 30px;
+        }
+        
+        .member-role {
+            color: var(--primary-blue);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .milestones {
+            padding: 100px 0;
+        }
+        
+        .milestone-track {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .milestone-track::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-blue);
+            transform: translateX(-50%);
+        }
+        
+        .milestone-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .milestone-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .milestone-content {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .milestone-item:nth-child(even) .milestone-content {
+            margin-right: 40px;
+        }
+        
+        .milestone-item:nth-child(odd) .milestone-content {
+            margin-left: 40px;
+        }
+        
+        .milestone-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gold);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 1;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .coverage-section {
+            background: var(--primary-blue);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .coverage-map {
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .location-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        
+        .contact-cta {
+            background: linear-gradient(135deg, var(--accent-gold), #FFB300);
+            color: var(--dark);
+            padding: 80px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+            <div class="network-node"></div>
+        </div>
+        <p>Loading Toh Networks...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</span>
+                    <span><i class="fab fa-whatsapp"></i> 0706 315 742</span>
+                </div>
+                <div class="social-top">
+                    <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Toh Networks</h1>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn btn-primary pulse">Get in Touch <i class="fas fa-arrow-right"></i></a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Our Story & Mission</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Founded in Kibwezi to bridge the digital divide and provide reliable connectivity solutions for our community</p>
+            <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#story" class="btn btn-primary btn-large">
+                    <i class="fas fa-book-open"></i> Read Our Story
+                </a>
+                <a href="#ceo" class="btn btn-secondary btn-large">
+                    <i class="fas fa-user-tie"></i> Meet Our CEO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foundation Story -->
+    <section id="story" class="foundation-story">
+        <div class="foundation-bg"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">How It Began</span>
+                <h2 class="section-title">Our Foundation Story</h2>
+            </div>
+
+            <div class="story-content" data-aos="fade-up">
+                <div class="foundation-date">
+                    <i class="fas fa-calendar-alt"></i> Founded: October 12, 2025
+                </div>
+                
+                <div class="story-highlight">
+                    <i class="fas fa-quote-left" style="color: var(--accent-gold); margin-right: 10px;"></i>
+                    We started with a simple vision: to bring reliable internet connectivity to every home and business in Kibwezi.
+                </div>
+
+                <p>Toh Networks was born out of a recognized need in our community. In 2025, Kibwezi was experiencing rapid growth but faced significant challenges in digital connectivity. Many businesses struggled with unreliable internet, students faced difficulties accessing online resources, and homes lacked proper security systems.</p>
+
+                <p>Our founder, <strong>Martin Mutinda Mbiti</strong>, identified this gap and assembled a team of passionate technology experts. We began with modest resources but with a big dream: to transform Kibwezi into a digitally connected community where everyone could access reliable internet and feel secure in their homes and businesses.</p>
+
+                <p>We started with basic Hotspot and PPoE services, focusing on providing what the community needed most: <strong>reliability, affordability, and excellent customer service</strong>. Word spread quickly about our dependable service, and within months, we had connected our first 50 customers.</p>
+
+                <div class="key-moments">
+                    <h3>Key Moments in Our Journey:</h3>
+                    <ul>
+                        <li><strong>October 12, 2025:</strong> Toh Networks officially launched in Kibwezi</li>
+                        <li><strong>November 2025:</strong> Connected first 50 customers</li>
+                        <li><strong>December 2025:</strong> Expanded to include CCTV and security services</li>
+                        <li><strong>January 2026:</strong> Reached 100+ satisfied customers milestone</li>
+                        <li><strong>Present:</strong> Serving Kibwezi and expanding to surrounding areas</li>
+                    </ul>
+                </div>
+
+                <p>Today, we're proud to be Kibwezi's most trusted network solutions provider. But our mission remains the same: to connect, secure, and empower our community through technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section id="ceo" class="ceo-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Leadership</span>
+                <h2 class="section-title">Meet Our Founder & CEO</h2>
+                <p class="section-description">The visionary behind Toh Networks' success</p>
+            </div>
+
+            <div class="ceo-profile" data-aos="fade-up">
+                <div class="ceo-photo-container">
+                    <img src="images/CEO.jpeg" alt="Martin Mutinda Mbiti - CEO of Toh Networks">
+                    <div class="ceo-badge">
+                        <h3>Martin Mutinda Mbiti</h3>
+                        <p>Founder & Chief Executive Officer</p>
+                    </div>
+                </div>
+
+                <div class="ceo-details">
+                    <h3>About Martin Mutinda Mbiti</h3>
+                    <p>Martin is a technology entrepreneur with a passion for community development. Born and raised in Makueni County, he understands the unique challenges and opportunities in our region.</p>
+
+                    <div class="ceo-message">
+                        <blockquote>
+                            <i class="fas fa-quote-left" style="color: var(--accent-gold); font-size: 1.5rem; margin-right: 10px;"></i>
+                            "Our mission goes beyond providing internet. We're building a connected community where businesses can thrive, students can learn, and families can feel secure. Every connection we make is a step toward a better Kibwezi."
+                        </blockquote>
+                    </div>
+
+                    <div class="ceo-qualifications">
+                        <h4>Qualifications & Experience:</h4>
+                        <ul>
+                            <li><i class="fas fa-certificate"></i> Certified Network Engineer</li>
+                            <li><i class="fas fa-graduation-cap"></i> 10+ years in telecommunications</li>
+                            <li><i class="fas fa-users"></i> Community development advocate</li>
+                            <li><i class="fas fa-award"></i> Award-winning entrepreneur</li>
+                        </ul>
+                    </div>
+
+                    <div class="ceo-contact-info">
+                        <a href="mailto:martinmutinda095@gmail.com" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Email Martin
+                        </a>
+                        <a href="https://wa.me/254706315742" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-values">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Core</span>
+                <h2 class="section-title">Mission, Vision & Values</h2>
+                <p class="section-description">The principles that guide everything we do</p>
+            </div>
+
+            <div class="mission-vision-grid">
+                <div class="mission-card" data-aos="fade-right">
+                    <div class="mission-icon-large">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide reliable, affordable, and high-quality internet and security solutions that empower individuals and businesses in Kibwezi to thrive in the digital age. We're committed to bridging the digital divide and creating opportunities through connectivity.</p>
+                </div>
+
+                <div class="mission-card" data-aos="fade-up">
+                    <div class="mission-icon-large">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become Eastern Kenya's leading provider of digital solutions, recognized for innovation, reliability, and exceptional customer service. We envision a fully connected Kibwezi where every home and business has access to world-class internet and security.</p>
+                </div>
+
+                <div class="mission-card" data-aos="fade-left">
+                    <div class="mission-icon-large">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Our Promise</h3>
+                    <p>We promise to deliver consistent, reliable service with 24/7 support. Your satisfaction is our priority, and we're committed to building long-term relationships based on trust, transparency, and exceptional value.</p>
+                </div>
+            </div>
+
+            <div class="values-section" data-aos="fade-up">
+                <h3 class="text-center" style="margin: 60px 0 40px;">Our Core Values</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Customer Focus</h4>
+                        <p>Your needs come first. We listen, understand, and deliver solutions that work for you.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Reliability</h4>
+                        <p>We deliver on our promises. Consistent, dependable service you can count on.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>We continuously improve and adopt new technologies to serve you better.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community</h4>
+                        <p>We're part of Kibwezi. Our success is tied to the success of our community.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>Honest, transparent dealings in everything we do. No hidden fees, no surprises.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Excellence</h4>
+                        <p>We strive for excellence in service, support, and customer experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our People</span>
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-description">Dedicated professionals committed to serving Kibwezi</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>John Mwangi</h3>
+                        <div class="member-role">Technical Director</div>
+                        <p>10+ years network engineering experience. Leads our technical team.</p>
+                        <div class="member-contact">
+                            <small><i class="fas fa-phone"></i> 0712 345 678</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Wanjiku</h3>
+                        <div class="member-role">Customer Success Manager</div>
+                        <p>Ensures customer satisfaction and handles support operations.</p>
+                        <div class="member-contact">
+                            <small><i class="fas fa-phone"></i> 0723 456 789</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Peter Kamau</h3>
+                        <div class="member-role">Installation Supervisor</div>
+                        <p>Leads our installation team with 8+ years experience.</p>
+                        <div class="member-contact">
+                            <small><i class="fas fa-phone"></i> 0734 567 890</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Grace Akinyi</h3>
+                        <div class="member-role">Security Systems Expert</div>
+                        <p>CCTV installation and security solutions specialist.</p>
+                        <div class="member-contact">
+                            <small><i class="fas fa-phone"></i> 0745 678 901</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="milestones">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Our Journey</span>
+                <h2 class="section-title">Milestones & Achievements</h2>
+                <p class="section-description">Key moments in our growth story</p>
+            </div>
+
+            <div class="milestone-track">
+                <div class="milestone-item" data-aos="fade-right">
+                    <div class="milestone-content">
+                        <h3>Company Founded</h3>
+                        <p>Toh Networks officially launched in Kibwezi with a focus on providing reliable internet services to the local community.</p>
+                    </div>
+                    <div class="milestone-year">2025</div>
+                </div>
+
+                <div class="milestone-item" data-aos="fade-left">
+                    <div class="milestone-content">
+                        <h3>First 50 Customers</h3>
+                        <p>Connected our first 50 satisfied customers, establishing trust and reputation in the Kibwezi community.</p>
+                    </div>
+                    <div class="milestone-year">2025</div>
+                </div>
+
+                <div class="milestone-item" data-aos="fade-right">
+                    <div class="milestone-content">
+                        <h3>Security Services Added</h3>
+                        <p>Expanded our offerings to include CCTV installation and comprehensive security solutions.</p>
+                    </div>
+                    <div class="milestone-year">2025</div>
+                </div>
+
+                <div class="milestone-item" data-aos="fade-left">
+                    <div class="milestone-content">
+                        <h3>100+ Customers Milestone</h3>
+                        <p>Reached the milestone of serving over 100 satisfied homes and businesses in Kibwezi.</p>
+                    </div>
+                    <div class="milestone-year">2026</div>
+                </div>
+
+                <div class="milestone-item" data-aos="fade-right">
+                    <div class="milestone-content">
+                        <h3>Expansion Plans</h3>
+                        <p>Beginning expansion to serve surrounding areas in Makueni County with our reliable services.</p>
+                    </div>
+                    <div class="milestone-year">2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Area -->
+    <section class="coverage-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Serving Kibwezi & Beyond</h2>
+                <p class="section-description">We're proud to serve these areas in Makueni County</p>
+            </div>
+
+            <div class="coverage-map" data-aos="zoom-in">
+                <div class="location-dot" style="top: 30%; left: 45%;"></div>
+                <div class="location-dot" style="top: 40%; left: 60%; animation-delay: 0.5s;"></div>
+                <div class="location-dot" style="top: 60%; left: 35%; animation-delay: 1s;"></div>
+                <div class="location-dot" style="top: 70%; left: 55%; animation-delay: 1.5s;"></div>
+                
+                <div style="background: white; padding: 40px; border-radius: var(--border-radius);">
+                    <h3 style="color: var(--dark-blue); margin-bottom: 30px;">Areas We Serve</h3>
+                    <div class="areas-grid">
+                        <div class="area-item">✓ Kibwezi Town</div>
+                        <div class="area-item">✓ Kibwezi West</div>
+                        <div class="area-item">✓ Kibwezi East</div>
+                        <div class="area-item">✓ Masongaleni</div>
+                        <div class="area-item">✓ Makindu</div>
+                        <div class="area-item">✓ Sultan Hamud</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 1.1rem;">We're continuously expanding our coverage to reach more communities in Makueni County.</p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Become Part of Our Story</h2>
+                <p>Join the growing number of satisfied customers in Kibwezi who trust Toh Networks for their connectivity and security needs.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Schedule Consultation
+                    </a>
+                    <a href="tel:0706315742" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Call: 0706 315 742
+                    </a>
+                </div>
+                <p class="cta-note"><i class="fas fa-check-circle"></i> Proudly serving Kibwezi since October 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Toh Networks</h3>
+                            <p>Connect • Secure • Empower</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Providing reliable internet and security solutions in Kibwezi since October 2025.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/254706315742" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li><a href="packages.html"><i class="fas fa-wifi"></i> Packages</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#internet"><i class="fas fa-wifi"></i> Internet Services</a></li>
+                        <li><a href="services.html#security"><i class="fas fa-shield-alt"></i> CCTV Installation</a></li>
+                        <li><a href="services.html#network"><i class="fas fa-network-wired"></i> Network Solutions</a></li>
+                        <li><a href="services.html#support"><i class="fas fa-headset"></i> Technical Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Kibwezi Town, Makueni County</li>
+                        <li><i class="fas fa-phone"></i> 0706 315 742 (WhatsApp)</li>
+                        <li><i class="fas fa-envelope"></i> martinmutinda095@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
+                        <li><i class="fas fa-clock"></i> Sat: 9AM-4PM</li>
+                        <li><i class="fas fa-history"></i> Founded: October 12, 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Toh Networks. All rights reserved. | Founded October 12, 2025 | Proudly Serving Kibwezi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/254706315742" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat About Our Story</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Animate milestone years
+        document.querySelectorAll('.milestone-year').forEach((year, index) => {
+            year.style.animationDelay = `${index * 0.3}s`;
+        });
+
+        // Coverage map animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const dots = document.querySelectorAll('.location-dot');
+                    dots.forEach(dot => {
+                        dot.style.animation = 'pulse 2s infinite';
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const coverageSection = document.querySelector('.coverage-section');
+        if (coverageSection) {
+            observer.observe(coverageSection);
+        }
+    </script>
+</body>
+</html>
